@@ -32,6 +32,7 @@ let graphqlPanel;
 let _currentElement;
 
 function getGenOptions() {
+  console.log('BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB');
   return {
     idlDoc: app.preferences.get(PREF_GENDOC),
     indentSpaces: app.preferences.get(PREF_INDENTSPC),
@@ -88,13 +89,16 @@ function openFolder(base, path, options) {
  * @param {Object} options
  */
 function _handleGenerate(base, path, options) {
+  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAA');
   // If options is not passed, get from preference
   options = options || getGenOptions();
   // If base is not assigned, popup ElementPicker
   if (!base) {
+    console.log('CCCCCCCCCCCCCC');
     app.elementPickerDialog
       .showDialog("Select the package to generate from", null, type.UMLPackage)
       .then(function({ buttonId, returnValue }) {
+        console.log('ddddddddddddddddddddddddddddd');
         if (buttonId === "ok") {
           if (returnValue instanceof type.Project || returnValue instanceof type.UMLPackage) {
             base = returnValue;
@@ -105,6 +109,7 @@ function _handleGenerate(base, path, options) {
         }
       });
   } else {
+    console.log('eeeeeeeeeeeeeeeeeeeeeeeeeeeee');
     openFolder(base, path, options);
   }
 }

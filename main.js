@@ -55,11 +55,12 @@ function updateMenus() {
 }
 
 function generateGraphQL(base, path, options) {
-  if (options.debug) {
+  console.log('GENERATE aaaaaaaaaaaaaaaaaaaaaaaaaaa');
+  //if (options.debug) {
     console.log("base", base);
     console.log("path", path);
     console.log("options", options);
-  }
+  //}
 
   try {
     codeGenerator.generate(base, path, options);

@@ -7,8 +7,12 @@
           "label": "GraphQL",
           "id": "tools.graphql",
           "submenu": [
-            { "label": "Generate IDL...", "id": "tools.graphql.generate", "command": "graphql:generate" },
-            { "label": "Gerar GraphQL", "id": "tools.graphql.generate", "command": "graphql:generate" },
+            { "label": "Generate IDL...", "id": "tools.graphql.generate", "command": "graphql:generate",
+              "options": {"debug": true}
+            },
+            { "label": "Gerar GraphQL", "id": "tools.graphql.generate", "command": "graphql:generate" ,
+                "options": {"debug": true}
+            },
             { "type": "separator" },
             { "label": "Configure", "id": "tools.graphql.configure", "command": "graphql:configure" },
             { "label": "About", "id": "tools.graphql.about", "command": "graphql:about" }
